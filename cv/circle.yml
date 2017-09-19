@@ -1,0 +1,9 @@
+test:
+  override:
+    - echo "test"
+
+deployment:
+  prod:
+    branch: master
+    commands:
+      - aws s3 sync . s3://cv.ramondario.com/ --delete
