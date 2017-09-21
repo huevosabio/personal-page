@@ -5,7 +5,7 @@ PELICANOPTS=
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
-OUTPUTDIR_HOME=$(BASEDIR)/ramondario
+#OUTPUTDIR_HOME=$(BASEDIR)/ramondario
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
@@ -18,7 +18,7 @@ SSH_PORT=22
 SSH_USER=root
 SSH_TARGET_DIR=/var/www
 
-S3_BUCKET=notes.ramondario.com
+S3_BUCKET=ramondario.com
 S3_BUCKET_HOME=ramondario.com
 
 CLOUDFILES_USERNAME=my_rackspace_username
@@ -115,7 +115,7 @@ ftp_upload: publish
 
 s3_upload: publish
 	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed --no-mime-magic --guess-mime-type
-	s3cmd sync $(OUTPUTDIR_HOME)/ s3://$(S3_BUCKET_HOME) --acl-public --delete-removed --no-mime-magic --guess-mime-type
+	#s3cmd sync $(OUTPUTDIR_HOME)/ s3://$(S3_BUCKET_HOME) --acl-public --delete-removed --no-mime-magic --guess-mime-type
 
 cf_upload: publish
 	cd $(OUTPUTDIR) && swift -v -A https://auth.api.rackspacecloud.com/v1.0 -U $(CLOUDFILES_USERNAME) -K $(CLOUDFILES_API_KEY) upload -c $(CLOUDFILES_CONTAINER) .

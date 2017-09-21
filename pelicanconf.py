@@ -61,9 +61,9 @@ SOCIAL = (('github', 'https://github.com/huevosabio'),
 # navigation
 MENUITEMS = [
 	#('Projects','/projects/'),
-	('Notes','/notes/'),
-	('Publications','/publications.html'),
-	('CV', '/cv/ramon_iglesias_cv.pdf')
+	('Notes','notes/'),
+	('Publications','publications.html'),
+	('CV', 'cv/ramon_iglesias_cv.pdf')
 	]
 
 DEFAULT_PAGINATION = False
