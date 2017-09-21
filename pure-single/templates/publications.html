@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% block title %}{{ page.title|striptags }} // {{ super() }}{% endblock title %}
+
+{% block content %}
+    <script type="text/javascript">
+        function disp(s) {
+            var win;
+            var doc;
+            win = window.open("", "WINDOWID");
+            doc = win.document;
+            doc.open("text/plain");
+            doc.write("<pre>" + s + "</pre>");
+            doc.close();
+        }
+    </script>
+    <div class="pure-u">
+        <div class="content">
+            <h1 class="content-subhead">{{ page.title }}</h1>
+            <p>{{ page.content }}</p>
+            <section id="content" class="body">
+                <ul>
+                    {% for key, year, text, bibtex, pdf, slides, poster in publications %}
+                    <li id="{{ key }}">{{ text }}
+                            <!--[&nbsp;<a href="javascript:disp('{{ bibtex|replace('\n', '\\n')|escape|forceescape }}');">Bibtex</a>&nbsp;]-->
+                            {% for label, target in [('pdf', pdf), ('Slides', slides), ('Poster', poster)] %}
+                            {{ "[&nbsp;<a href=\"%s\">%s</a>&nbsp;]" % (target, label) if target }}
+                            {% endfor %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+        {% if DISQUS_ON_PAGES %}
+        {% include 'disqus.html' %}
+        {% endif %}
+        </div>
+
+    {% include 'footer.html' %}
+    </div>
+{% endblock %}

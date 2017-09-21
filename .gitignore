@@ -102,3 +102,6 @@ ENV/
 
 # mac files
 .DS_Store
+
+# pelican folder
+output/

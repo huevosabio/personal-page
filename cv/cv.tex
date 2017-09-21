@@ -41,6 +41,10 @@
 %Italian hyphenation for the word: ''corporations''
 \hyphenation{im-pre-se}
 
+
+%---------publications
+\renewcommand\refname{Publications}
+
 %-------------WATERMARK TEST [**not part of a CV**]---------------
 \usepackage[absolute]{textpos}
 
@@ -198,10 +202,8 @@ Automatically generated crane path schedules for wind farm erection by developin
  \textsc{Languages:}& Spanish (native), English (fluent), German (intermediate)\\ \\ 
 \end{tabularx}
 
-%TODO: 
-% rebuild groupstats, serve it in your server, add to resume
-% improve the research experience to the style in experience
-% build in circleci, push to cv.ramondario.com
-% 
+\nocite{*}
+\bibliographystyle{IEEEtran}
+\bibliography{../bib/iglesias}
 
 \end{document}
