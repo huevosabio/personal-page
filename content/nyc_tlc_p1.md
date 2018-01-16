@@ -85,16 +85,37 @@ for url,filename in zip(yCabUrls,yCabFilenames):
 Now, simply run
 
 ```
-python download_files
+python download_files.py
 ```
 and wait for it to end. Tip: This will likely take hours, make sure you run this in the background (e.g. using `screen`) to ensure that it will continue to run after you log-off.
 
 ## Copying to S3
 
-### Installing the AWS toolset
+The second part involves copying these files to an S3 bucket. 
 
-### Creating the S3 Bucket
+First, install the AWS CLI toolset:
+```
+pip install awscli
+```
 
-### Syncing the Files
+Now, run
+```
+aws configure
+```
+to configure the command using your credentials (if you are confused, [this guide can help](https://databricks.com/wp-content/uploads/2015/08/Databricks-how-to-data-import.pdf)). 
 
-## Outro with next steps
+Having `awscli` installed and configured, we can create a bucket to host our dataset. In my case, I created a bucket called `nyc-data` as follows:
+```
+aws s3 mb s3://nyc-data
+```
+
+Finally, we can sync all the files by running:
+```
+aws s3 sync /media/Big_Data/rdit/nyc-tlc s3://nyc-tlc
+```
+
+As before, it is recommended that you run this in the background to ensure it completes.
+
+## Next steps
+
+The next steps involve i) filtering the dataset so that we only consider trips that start and end within Manhattan, ii) split Manhattan into a finite set of regions and labeling each trip with the origin and destination regions, iii) aggregate the data into number of trips per Origin-Destination-Time triplets.
