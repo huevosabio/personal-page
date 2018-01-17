@@ -8,13 +8,13 @@ Summary: In this multi-part series, I will process five years of taxi trips from
 
 For our research in Autonomous Mobility-on-Demand, we developed [a real-time controller that leverages short-term travel demand predictions](https://arxiv.org/abs/1709.07032). Naturally, part of the work is to come up with _good_ predictions, so we are testing forecasting models based on Long Short-Term Memory neural networks. To train these models, we previously used small datasets provided by Didi Chuxing. However, we are now going to test to the largest available dataset of taxi trips: the [New York City Taxi and Limousine Commission dataset](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) (NYC TLC). 
 
-These series of entries will record how to process five years of data in a format that we can then use to train our neural networks. This first entry focuses on copying the data to a location I can readily use, AWS S3.
+These series of entries will record how to process six years of data (2009-2014, [since afterwards ridesharing took over a significant portion of the demand](http://toddwschneider.com/data/taxi/taxi_uber_lyft_trips_per_day.png)) in a format that we can then use to train our neural networks. This first entry focuses on copying the data to a location I can readily use, AWS S3.
 
 To the best of my knowledge, there is no easy way to move files from the internet into S3 without first downloading them to a computer or server you own. Thus, the process consists of downloading the files into a local computer, then syncing the files with an S3 bucket.
 
 ## Copying the files locally
 
-The first step is to make sure that you have enough space to copy all of the files (~120 GB). There are surely ways to use less space (e.g. download, sync, and delete each file at a time), but since in my case this was not a constraint, I went the easy route.
+The first step is to make sure that you have enough space to copy all of the files (~170 GB). There are surely ways to use less space (e.g. download, sync, and delete each file at a time), but since in my case this was not a constraint, I went the easy route.
 
 The second step is to create a folder to host all the files. A single command does this for us:
 
@@ -40,13 +40,10 @@ yCabFNPrefix = "yellow_tripdata_"
 
 #Availaiblity of data set by month & year
 yDict = {}
-years = range(2012, 2018)
+years = range(2009, 2015)
+months = range(1,13)
 
-for year in years:
-    if year == 2017:
-        months = range(1,8)
-    else:
-        months = range(1,13)
+for year in years:    
     yDict[year] = months
 
 yCabUrls = []
