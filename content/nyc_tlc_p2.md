@@ -14,7 +14,7 @@ Therefore, I will use Spark to distribute the load to multiple machines. In part
 
 ## Setup Databricks
 
-I will not get into the details of how to setup a Databricks account (you can follow the instructions in the website), nor how to connect it to your AWS account (you can use [this nifty guide](https://databricks.com/)). 
+I will not get into the details of how to setup a Databricks account (you can follow the instructions in the website), nor how to connect it to your AWS account (you can use [this nifty guide](https://databricks.com/wp-content/uploads/2015/08/Databricks-how-to-data-import.pdf)). 
 
 However, I do want to state what cluster configuration I used. The cluster consisted of `m4.large` EC2 instances (8 GB memory, 2 cores) with autoscaling enabled. The cluster had a minimum of one worker and maximum of 20, at most 10 of which were on-demand instances and the rest were spot instances with a bid price of 50% of the on-demand instances. All of the workers had Spark 2.2.1 and Scala 2.11. 
 
