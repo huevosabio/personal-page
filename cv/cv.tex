@@ -14,7 +14,7 @@
 \usepackage[cm]{fullpage}
 %Setup hyperref package, and colours for links
 
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=0.2in,bottom=0.1in, top=0.25in]{geometry}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \usepackage{hyperref}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
@@ -90,15 +90,15 @@
 
 \begin{tabularx}{\textwidth}{Xr}	
  \bf{Stanford University} & \bf{01/2016-Present}\\ 
-\emph{Ph.D. in Civil Engineering} (expected 2019) &\\
+\emph{Ph.D. in Civil Engineering} (expected 6/2019) &\\
 \multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Autonomous Systems Laboratory (ASL) - Advisor: Marco Pavone}\\
 \multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Focus: Optimal Control of Autonomous Fleets.}\\
-\multicolumn{2}{c}{} \\
+\\%\multicolumn{2}{c}{} \\
 
  \bf{Stanford University} & \bf{09/2012-06/2014} \\ 
 \emph{M.S. in Civil Engineering} &
-\\\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Focus: Data Analysis and Optimization.}
-\\\multicolumn{2}{c}{} \\
+\\\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Focus: Data Analysis and Optimization.}\\
+\\%\multicolumn{2}{c}{} \\
 
 \bf{The University of Texas at Austin} & \bf{08/2007-06/2012}\\
 \emph{B.S. in Civil Engineering} &\\
@@ -109,53 +109,51 @@
 \section{Recent Experience}
 \begin{tabularx}{\textwidth}{Xr}
 
- \bf{Lyft Inc.}, San Francisco, CA & \bf{6/2018-9/2018}\\
+ {\bf{Lyft Inc.}}, San Francisco, CA & \bf{6/2018-9/2018}\\
  \emph{Research Science Intern} &\\
  \multicolumn{2}{p{0.98\textwidth}}{
- Developed prepositioning algorithms for autonomous fleets.
+ Worked on improving the performance of Lyft's self-driving pilot.
  \begin{itemize}
- 	\item Developed a stochastic prepositioning algorithm that leverages short-term demand forecasts to optimize self-driving fleet operations.
- 	\item Tested the algorithm in simulation to compare against human behavior.%simulator
- 	\item Deployed the prepositioning algorithm to a self-driving pilot in Las Vegas.%prod
+ 	\item Developed a prepositioning algorithm that leverages demand forecasts and stochastic programming to optimize self-driving fleet operations. Simulation results show significant improvements in pickup time when compared to human drivers.
+ 	\item Performed steady-state analyses to characterize upper bound (using network flows) and expected improvements (using queueing theory) based on historical data. This along with power analyses allowed us to design experiments in production.
+ 	\item Deployed the prepositioning algorithm to a self-driving pilot in Las Vegas as part of an A/B test to understand the impact of prepositioning in ridesharing fleets.%prod
  \end{itemize}
  }\\
- \multicolumn{2}{c}{} \\
+ %\multicolumn{2}{c}{} \\
 
-
- \bf{Stanford University}, Stanford, CA & \bf{1/2016-Present}\\
+ {\bf{Stanford University}}, Stanford, CA & \bf{1/2016-Present}\\
  \emph{Researcher} &\\
  \multicolumn{2}{p{0.98\textwidth}}{
  Devising methods to model and control large fleets of autonomous vehicles (Autonomous Mobility-on-Demand, or AMoD). 
  \begin{itemize}
- 	\item Developed a queueing-theoretical framework to characterize AMoD systems \cite{IglesiasRossiEtAl2016,IglesiasRossiEtAl2017}.
- 	\item Leveraged network flow theory to model and optimize the interaction between fleets of autonomous electric vehicles and the power grid \cite{RossiIglesiasEtAl2018,RossiIglesiasEtAl2018b}.
- 	\item Trained deep learning models to predict short-term travel demand and devised a stochastic model predictive controller that leverages the forecasted demand to operate in real-time large fleets of autonomous vehicles \cite{IglesiasRossiEtAl2018,TsaoIglesiasEtAl}.
- 	\item Collaborated with Toyota to implement vehicle relocation algorithms in their carsharing system, Ha:mo, in Japan.
+ 	\item Developed a queueing-theoretical framework to characterize AMoD systems under heterogeneous constraints (e.g. road congestion, battery charging) that is amenable to optimization by casting it as a linear program \cite{IglesiasRossiEtAl2016,IglesiasRossiEtAl2017}.
+ 	\item Leveraged network flow theory to optimize the interaction between autonomous, electric fleets and the power grid \cite{RossiIglesiasEtAl2018,RossiIglesiasEtAl2018b}.
+ 	\item Devised and trained recurrent neural networks to predict short-term travel demand and developed a stochastic model predictive controller that leverages these forecasts to operate in real-time large fleets of autonomous vehicles \cite{IglesiasRossiEtAl2018,TsaoIglesiasEtAl}.
+ 	\item Collaborated with Toyota to implement vehicle relocation algorithms in their carsharing system, Ha:mo, in Japan. Developed a web application (React frontend, Python backend) that allows human operators to visualize the current and forecasted state of the system as well as receive rebalancing tasks that optimize for vehicle availability.
  \end{itemize}
  }\\
- \multicolumn{2}{c}{} \\
+ %\multicolumn{2}{c}{} \\
 
-\bf{SunPower}, Richmond, CA & \bf{01/2015-01/2016}\\
+{\bf{SunPower}}, Richmond, CA & \bf{01/2015-01/2016}\\
 \emph{Financial Software Engineer} &\\
 \multicolumn{2}{p{0.98\textwidth}}{
 Architected and developed software for the Financial Products team. 
 \begin{itemize}
-	\item Built a new pricing engine, reducing the cost by 80\% and the response time by 90\%.
-	\item Developed an internal data processing web application to run and visualize complex financial analyses.
-	\item Architected and implemented the DevOps pipeline for the Financial Products team.
+	\item Built a new pricing engine (Python backend), reducing the cost by 80\% and the response time by 90\%.
+	\item Developed an internal data processing web application to run and visualize complex financial analyses (Python backend, Angular frontend).
+	\item Built the continuous integration pipeline (Docker, Salt, git) for the Financial Products team allowing for faster and safer developing iterations.
 \end{itemize}
 }\\
-\multicolumn{2}{X}{} \\
+%\multicolumn{2}{X}{} \\
 
-\bf{Stanford University}, Stanford, CA & \bf{10/2013-12/2014}\\
+{\bf{Stanford University}}, Stanford, CA & \bf{10/2013-12/2014}\\
 \emph{Researcher} &\\
 \multicolumn{2}{p{0.98\textwidth}}{
-Developed methods to model contractor operational costs into wind farm layout design, and devised algorithms to optimize wind farm building schedules.
+Developed methods to optimize wind farm contractors operational costs.
 \begin{itemize} 
-	\item Built predictive model to forecast the expected number of days lost due to high winds by month and the best hours of the day to work each month using Markov models trained on past hourly wind data. 
-	\item Optimized crane path schedules for wind farm erection. 
-	\item Optimized wind farm layout while considering erection costs and life-time revenue.
-	\item Built a web application that contractors can use to leverage the aforementioned methods.
+	\item Built Markov chain models to forecast the expected number of days lost due to high winds by month and the best hours of the day to work each month using historical wind speed measurements and numerical weather prediction models.
+	\item Developed a data processing and optimization pipeline for converting GIS files of wind farms into optimal erection schedules. It consists of parsing the input files into a weighted graph and solving the crane schedule as a Traveling Salesman Problem. 
+	\item Built a web application (Angular frontend, Python backend) for wind farm contractors to leverage the wind forecasting and crane scheduling models to make better decisions on the design and construction schedule of the wind farm.
 \end{itemize}
 }\\
 %\multicolumn{2}{c}{} \\
@@ -226,13 +224,13 @@ Developed methods to model contractor operational costs into wind farm layout de
 
 \section{Skills and Interests}
 \begin{tabularx}{\textwidth}{lX}
-\bf{Software:}& Python (Numpy, Pandas, Tensorflow, PyTorch, Flask), Javascript (AngularJS, D3, Leaflet), R, MATLAB; AWS, Spark, Git, Docker, CircleCI, PostgreSQL, \LaTeX \\ \\ 
+\bf{Software:}& Python (Numpy, Pandas, Tensorflow, PyTorch, Flask), Javascript (React, AngularJS, D3, Leaflet), R; AWS, Spark, Git, Docker, CircleCI, PostgreSQL, \LaTeX \\ \\ 
 
  \bf{Coursework:}& Machine Learning, Data Mining, Decision Making under Uncertainty, Optimization, Deep Learning, Data Visualization, Optimal Control, State Estimation, Web Development\\ \\ 
 
- \bf{Sports:}& Show Jumping, Soccer, Racquetball\\ \\
+ %\bf{Sports:}& Show Jumping, Soccer, Racquetball\\ \\
 
- \bf{Languages:}& Spanish (native), English (fluent), German (intermediate)\\ \\ 
+ %\bf{Languages:}& Spanish (native), English (fluent), German (intermediate)\\ \\ 
 \end{tabularx}
 
 \nocite{*}
