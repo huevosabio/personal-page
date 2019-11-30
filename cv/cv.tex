@@ -1,5 +1,9 @@
 \documentclass[a4paper,10pt]{article}
 
+% TODO:
+% - Needs more deep learning. Add the Yamins project and the State Estimation project to beef up DL.
+% 
+
 %A Few Useful Packages
 \usepackage{tabularx}
 \usepackage{marvosym}
@@ -84,60 +88,61 @@
 
 \centering{650.669.7306 | \href{mailto:rdit@stanford.edu}{rdit@stanford.edu} | \url{http://ramondario.com}}
 
+%Section: Interests
+%\section{Research Interests}
+%\begin{tabularx}{\textwidth}{lX}
+%Machine Learning, Artificial Intelligence, Reinforcement Learning, Representation Learning, Optimization %\\
 
-%Section: Education
-\section{Education}
-
-\begin{tabularx}{\textwidth}{Xr}	
- \bf{Stanford University} & \bf{01/2016-Present}\\ 
-\emph{Ph.D. in Civil Engineering} (expected 6/2019) &\\
-\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Autonomous Systems Laboratory (ASL) - Advisor: Marco Pavone}\\
-\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Focus: Optimal Control of Autonomous Fleets.}\\
-\\%\multicolumn{2}{c}{} \\
-
- \bf{Stanford University} & \bf{09/2012-06/2014} \\ 
-\emph{M.S. in Civil Engineering} &
-\\\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Focus: Data Analysis and Optimization.}\\
-\\%\multicolumn{2}{c}{} \\
-
-\bf{The University of Texas at Austin} & \bf{08/2007-06/2012}\\
-\emph{B.S. in Civil Engineering} &\\
-%\multicolumn{2}{c}{} \\
-\end{tabularx}
+%\bf{Theory:}& Machine Learning, Representation Learning, Deep Learning\\ \\ 
+%\end{tabularx}
 
 %Section: Work Experience at the top
 \section{Recent Experience}
 \begin{tabularx}{\textwidth}{Xr}
 
- {\bf{Lyft Inc.}}, San Francisco, CA & \bf{6/2018-9/2018}\\
- \emph{Research Science Intern} &\\
+ {\bf{Lyft Inc.}}, San Francisco, CA & \bf{09/2019-Present}\\
+ \emph{Research Scientist} &\\
  \multicolumn{2}{p{0.98\textwidth}}{
- Worked on improving the performance of Lyft's self-driving pilot.
+ Working on driver positioning algorithms:
  \begin{itemize}
- 	\item Developed a prepositioning algorithm that leverages demand forecasts and stochastic programming to optimize self-driving fleet operations. Simulation results show significant improvements in pickup time when compared to human drivers.
- 	\item Performed steady-state analyses to characterize upper bound (using network flows) and expected improvements (using queueing theory) based on historical data. This along with power analyses allowed us to design experiments in production.
- 	\item Deployed the prepositioning algorithm to a self-driving pilot in Las Vegas as part of an A/B test to understand the impact of prepositioning in ridesharing fleets.%prod
+ 	\item Positional signals for drivers to improve their earnings.
  \end{itemize}
  }\\
- %\multicolumn{2}{c}{} \\
 
- {\bf{Stanford University}}, Stanford, CA & \bf{1/2016-Present}\\
- \emph{Researcher} &\\
+ {\bf{Stanford University}}, Stanford, CA & \bf{01/2016-08/2019}\\
+ \emph{Research Assistant} &\\
  \multicolumn{2}{p{0.98\textwidth}}{
- Devising methods to model and control large fleets of autonomous vehicles (Autonomous Mobility-on-Demand, or AMoD). 
+ Devising methods to model and control large fleets of autonomous vehicles (Autonomous Mobility-on-Demand, or AMoD):
  \begin{itemize}
  	\item Developed a queueing-theoretical framework to characterize AMoD systems under heterogeneous constraints (e.g. road congestion, battery charging) that is amenable to optimization by casting it as a linear program \cite{IglesiasRossiEtAl2016,IglesiasRossiEtAl2017}.
  	\item Leveraged network flow theory to optimize the interaction between autonomous, electric fleets and the power grid \cite{RossiIglesiasEtAl2018,RossiIglesiasEtAl2018b}.
  	\item Devised and trained recurrent neural networks to predict short-term travel demand and developed a stochastic model predictive controller that leverages these forecasts to operate in real-time large fleets of autonomous vehicles \cite{IglesiasRossiEtAl2018,TsaoIglesiasEtAl}.
  	\item Collaborated with Toyota to implement vehicle relocation algorithms in their carsharing system, Ha:mo, in Japan. Developed a web application (React frontend, Python backend) that allows human operators to visualize the current and forecasted state of the system as well as receive rebalancing tasks that optimize for vehicle availability.
  \end{itemize}
+ Side projects in representation learning:
+ \begin{itemize}
+ 	\item Investigated the impact of multi-task learning on the learned representations of convolutional neural networks. Results show increased predictive power with respect to representations observed in the Inferior Temporal (IT) cortex of primates.
+ 	\item Developing deep learning methods to learn embedded, controllable representations of nonlinear systems from high-dimensional observations. 
+ \end{itemize}
+ }\\
+ %\multicolumn{2}{c}{} \\
+
+ {\bf{Lyft Inc.}}, San Francisco, CA & \bf{06/2018-09/2018}\\
+ \emph{Research Science Intern} &\\
+ \multicolumn{2}{p{0.98\textwidth}}{
+ Worked on improving the performance of Lyft's self-driving pilot:
+ \begin{itemize}
+ 	\item Developed an algorithm that leverages demand forecasts and stochastic programming to optimize self-driving fleet movements in real-time. Simulation results show significant improvements in pickup time when compared to human drivers.
+ 	\item Performed steady-state analyses to characterize upper bound (using network flows) and expected improvements (using queueing theory) based on historical data. This along with power analyses allowed us to design experiments in production.
+ 	\item Deployed the prepositioning algorithm to a self-driving pilot in Las Vegas as part of an A/B test to understand the impact of prepositioning in ridesharing fleets.%prod
+ \end{itemize}
  }\\
  %\multicolumn{2}{c}{} \\
 
 {\bf{SunPower}}, Richmond, CA & \bf{01/2015-01/2016}\\
-\emph{Financial Software Engineer} &\\
+\emph{Software Engineer} &\\
 \multicolumn{2}{p{0.98\textwidth}}{
-Architected and developed software for the Financial Products team. 
+Architected and developed software for the Financial Products team:
 \begin{itemize}
 	\item Built a new pricing engine (Python backend), reducing the cost by 80\% and the response time by 90\%.
 	\item Developed an internal data processing web application to run and visualize complex financial analyses (Python backend, Angular frontend).
@@ -147,9 +152,9 @@ Architected and developed software for the Financial Products team.
 %\multicolumn{2}{X}{} \\
 
 {\bf{Stanford University}}, Stanford, CA & \bf{10/2013-12/2014}\\
-\emph{Researcher} &\\
+\emph{Research Assistant} &\\
 \multicolumn{2}{p{0.98\textwidth}}{
-Developed methods to optimize wind farm contractors operational costs.
+Developed methods to optimize wind farm contractors operational costs:
 \begin{itemize} 
 	\item Built Markov chain models to forecast the expected number of days lost due to high winds by month and the best hours of the day to work each month using historical wind speed measurements and numerical weather prediction models.
 	\item Developed a data processing and optimization pipeline for converting GIS files of wind farms into optimal erection schedules. It consists of parsing the input files into a weighted graph and solving the crane schedule as a Traveling Salesman Problem. 
@@ -184,6 +189,27 @@ Developed methods to optimize wind farm contractors operational costs.
 
 %\bf{11/2009-07/2010} &  \bf{Technical University Munich}\\&\emph{High Performance Concrete Adhesives}\\&\footnotesize{Tested different concrete adhesive when applied to high performance concrete.}\\\multicolumn{2}{c}{} \\
 
+\end{tabularx}
+
+%Section: Education
+\section{Education}
+
+\begin{tabularx}{\textwidth}{Xr}	
+ \bf{Stanford University} & \bf{01/2016-08/2019}\\ 
+\emph{Ph.D. in Civil Engineering}&\\
+\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Advisor: Marco Pavone}\\
+\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Focus: Optimal Control of Autonomous Fleets.}\\
+\\%\multicolumn{2}{c}{} \\
+
+ \bf{Stanford University} & \bf{09/2012-06/2014} \\ 
+\emph{M.S. in Civil Engineering} &
+\\\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Focus: Data Analysis and Optimization.}\\
+\\
+%\multicolumn{2}{c}{} \\
+
+\bf{The University of Texas at Austin} & \bf{08/2007-06/2012}\\
+\emph{B.S. in Civil Engineering} &\\
+%\multicolumn{2}{c}{} \\
 \end{tabularx}
 
 
@@ -222,7 +248,7 @@ Developed methods to optimize wind farm contractors operational costs.
 
 %Section: Skills
 
-\section{Skills and Interests}
+\section{Skills}
 \begin{tabularx}{\textwidth}{lX}
 \bf{Software:}& Python (Numpy, Pandas, Tensorflow, PyTorch, Flask), Javascript (React, AngularJS, D3, Leaflet), R; AWS, Spark, Git, Docker, CircleCI, PostgreSQL, \LaTeX \\ \\ 
 
