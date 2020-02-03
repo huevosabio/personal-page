@@ -11,6 +11,10 @@ Idea: start with stating the facts of inequality, and then go over the more popu
 Categorize each potential contributor into either innovation, immigration or ? (where ? will be eventually defined, for example, it seems like we're missing some notion of welfare policy that can be a key component).
 
 Causes that do not fall into immigration and innovation will not be explored after the inequality chapter, but hopefully I will get to deal with them in detail.
+
+Use data from IPUMS to explore each of this categories.
+
+Then, comes the conjecturing part. The main parts we want to highlight is which jobs are the ones getting into the 1%, 0.1%, 0.01%. Get a sense of what are these industries, and understand how immigration and innovation can increase the wealth pie such that the new frontiers are not immidiately dominated by the incumbents or reduce the wealth earned by the individuals. 
 ---
 
 # Inequality
@@ -32,3 +36,21 @@ Causes that do not fall into immigration and innovation will not be explored aft
 	- corporatism, corpocracy [?]
 	- female labor [?]
 
+## A primer on supply and demand in (dis)joint markets
+
+Essentially different components of our economies live in markets of different scales and reach. A subset of these markets are being severely disrupted, causing a chain reaction.
+
+# Innovation
+
+## Facts
+
+## Impacts on inequality
+	- merging markets with fewer global winners
+	- concentration of winners in a global market
+	- increased leverage potential of technology-savy workers
+	- network effects of technology-savy workers
+	- automation
+
+# Immigration
+
+## 
