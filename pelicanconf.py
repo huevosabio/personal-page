@@ -22,7 +22,7 @@ PUBLICATIONS_SRC = 'bib/iglesias.bib'
 
 PATH = 'content'
 STATIC_PATHS = ['images','cv']
-PLUGIN_PATHS = ['pelican-plugins']
+PLUGIN_PATHS = ['pelican-plugins', 'other-plugins']
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook',
            'liquid_tags.literal','liquid_tags.youtube','render_math', 
@@ -55,7 +55,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 # Social widget
 SOCIAL = (('github', 'https://github.com/huevosabio'),
           ('linkedin','https://www.linkedin.com/in/ram%C3%B3n-iglesias-00620227/'),
-          ('envelope','mailto:rdit@stanford.edu')
+          ('envelope','mailto:ramon.d.iglesias@gmail.com')
           )
 
 # navigation
