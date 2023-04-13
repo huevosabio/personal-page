@@ -86,7 +86,7 @@
 %Section: Personal Data
 %\section{Contact Information}
 
-\centering{650.669.7306 | \href{mailto:rdit@stanford.edu}{rdit@stanford.edu} | \url{http://ramondario.com}}
+\centering{\href{tel:16506697306}{+1 650 669 7306} | \href{mailto:ramon.d.iglesias@gmail.com}{ramon.d.iglesias@gmail.com} | \url{http://ramondario.com}}
 
 %Section: Interests
 %\section{Research Interests}
@@ -101,28 +101,38 @@
 \begin{tabularx}{\textwidth}{Xr}
 
  {\bf{Lyft Inc.}}, San Francisco, CA & \bf{09/2019-Present}\\
- \emph{Research Scientist} &\\
+ \emph{Senior Data Scientist} &\\
  \multicolumn{2}{p{0.98\textwidth}}{
- Working on driver positioning algorithms:
+ Tech lead building algorithmic systems for real-time supply management and risk prediction based on telematics data:
  \begin{itemize}
- 	\item Positional signals for drivers to improve their earnings.
+    % telematics
+    \item Reduced pose estimation computing time by \~90\% by reducing the optimization problem to one of finding the largest eigenvalue and corresponding eigenvector.
+    \item Doubled the number of labeled stop signs by combining imagery and trajectory data and using a neural network to predict which intersections actually contained a stop sign.
+    \item Analyzed the relationship of stop sign violations and driver likelihood of getting into an accident.
+ 	% powermode
+ 	\item Increased Lyft revenue by 5\% in selected markets by designing, building and managing the Priority Mode Controller, a real-time admission system that controls access to Priority Mode. Offline, the controller learns the relationship between the percentage of Priority drivers and the percentage of rides assigned to Priority rides; online, it uses this model to optimize the size of the Priority set that maximizes market surplus.
+ 	% ppz
+ 	\item Influenced team roadmap by studying the effectiveness of different monetized and unmonetized driver nudges via A/B testing leading to a complete revamp of the real-time supply management strategy.
+ 	% hotspots
+ 	\item Built a driver positioning recommendation system that optimizes driver earnings based on short-term, geotemporal forecasts of supply and demand.
+ 	\item Enhanced Lyft's internal market simulator to support for centralized fleet control.
  \end{itemize}
  }\\
 
  {\bf{Stanford University}}, Stanford, CA & \bf{01/2016-08/2019}\\
  \emph{Research Assistant} &\\
  \multicolumn{2}{p{0.98\textwidth}}{
- Devising methods to model and control large fleets of autonomous vehicles (Autonomous Mobility-on-Demand, or AMoD):
+ Devised methods to model and control large fleets of autonomous vehicles (Autonomous Mobility-on-Demand, or AMoD):
  \begin{itemize}
  	\item Developed a queueing-theoretical framework to characterize AMoD systems under heterogeneous constraints (e.g. road congestion, battery charging) that is amenable to optimization by casting it as a linear program \cite{IglesiasRossiEtAl2016,IglesiasRossiEtAl2017}.
  	\item Leveraged network flow theory to optimize the interaction between autonomous, electric fleets and the power grid \cite{RossiIglesiasEtAl2018,RossiIglesiasEtAl2018b}.
- 	\item Devised and trained recurrent neural networks to predict short-term travel demand and developed a stochastic model predictive controller that leverages these forecasts to operate in real-time large fleets of autonomous vehicles \cite{IglesiasRossiEtAl2018,TsaoIglesiasEtAl}.
- 	\item Collaborated with Toyota to implement vehicle relocation algorithms in their carsharing system, Ha:mo, in Japan. Developed a web application (React frontend, Python backend) that allows human operators to visualize the current and forecasted state of the system as well as receive rebalancing tasks that optimize for vehicle availability.
+ 	\item Developed a stochastic model predictive controller that leverages demand forecasts from a recurrent neural network to operate in real-time large fleets of autonomous vehicles \cite{IglesiasRossiEtAl2018,TsaoIglesiasEtAl} resulting in a 90\% reduction in passenger waiting when compared to other methods in the literature.
+ 	\item Built a vehicle relocation system in collaboration with Toyota Ha:mo, a carsharing system in Japan. Scope included the algorithmic relocation system as well as the UI used by the human relocators. Deployed pilot results showed 5\% increased availability of the vehicles and 10\% increase in parking.
  \end{itemize}
  Side projects in representation learning:
  \begin{itemize}
- 	\item Investigated the impact of multi-task learning on the learned representations of convolutional neural networks. Results show increased predictive power with respect to representations observed in the Inferior Temporal (IT) cortex of primates.
- 	\item Developing deep learning methods to learn embedded, controllable representations of nonlinear systems from high-dimensional observations. 
+ 	\item Studied the impact of multi-task learning on the learned representations of convolutional neural networks. Results show increased predictive power with respect to representations observed in the Inferior Temporal (IT) cortex of primates.
+ 	\item Developed deep learning methods to learn Bayesian filters from only images with the goal of recovering controllable latent dynamics. 
  \end{itemize}
  }\\
  %\multicolumn{2}{c}{} \\
@@ -144,9 +154,9 @@
 \multicolumn{2}{p{0.98\textwidth}}{
 Architected and developed software for the Financial Products team:
 \begin{itemize}
-	\item Built a new pricing engine (Python backend), reducing the cost by 80\% and the response time by 90\%.
-	\item Developed an internal data processing web application to run and visualize complex financial analyses (Python backend, Angular frontend).
-	\item Built the continuous integration pipeline (Docker, Salt, git) for the Financial Products team allowing for faster and safer developing iterations.
+	\item Built a new pricing engine powering over \$5M  yearly in new residential leases.
+	\item Developed an internal data processing web application to run and visualize complex financial analyses.
+	\item Built the continuous integration pipeline for the Financial Products team allowing for faster and safer developing iterations.
 \end{itemize}
 }\\
 %\multicolumn{2}{X}{} \\

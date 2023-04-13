@@ -1,5 +1,5 @@
 Title: On Inequality, Innovation and Immigration
-Date: 2017-02-09 18:36
+Date: 2020-02-09 18:36
 Tags: inequality, innovation, immigration, policy
 Author: Ramon Dario Iglesias
 Summary: A conjecture on the root causes of rising inequality in the United States and how innovation and immigration can decrease or increase it.
