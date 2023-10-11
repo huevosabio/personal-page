@@ -23,10 +23,9 @@ PUBLICATIONS_SRC = 'bib/iglesias.bib'
 PATH = 'content'
 STATIC_PATHS = ['images','cv']
 PLUGIN_PATHS = ['pelican-plugins', 'other-plugins']
-PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
-           'liquid_tags.include_code', 'liquid_tags.notebook',
-           'liquid_tags.literal','liquid_tags.youtube','render_math', 
-           'pelican-bibtex']
+LIQUID_TAGS = ["img", "literal", "video", "youtube",
+               "vimeo", "include_code", "notebook"]
+PLUGINS = ['summary', 'render_math', 'pelican-bibtex']
 
 TIMEZONE = 'US/Pacific'
 
@@ -55,6 +54,8 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 # Social widget
 SOCIAL = (('github', 'https://github.com/huevosabio'),
           ('linkedin','https://www.linkedin.com/in/ram%C3%B3n-iglesias-00620227/'),
+          ('twitter','https://twitter.com/RamonDarioIT'),
+          ('spotify','https://open.spotify.com/show/7fZaT8vNdhJ6T8reiu6C0n?si=501b3eec478543a9'),
           ('envelope','mailto:ramon.d.iglesias@gmail.com')
           )
 
