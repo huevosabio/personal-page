@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    {% include 'analytics.html' %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{% block meta_description %}{{ SITENAME }}, {{ TAGLINE }}{% endblock meta_description %}">
@@ -120,6 +121,5 @@ init_mathjax();
             event.preventDefault();
         });
     </script>
-    {% include 'analytics.html' %}
 </body>
 </html>
