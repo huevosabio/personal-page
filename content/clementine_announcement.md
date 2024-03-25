@@ -1,4 +1,4 @@
-Title: Say hi to Clementine!
+Title: Say Hi to Clementine!
 Date: 2024-03-12 08:45
 Tags: startup, ai, games
 Author: Ramon Dario Iglesias
