@@ -15,24 +15,13 @@ On cost, it is clear that the marginal cost remains an issue. All of the people 
 
 On what to do with them, there is a wide variety: [Minecraft bots](https://www.youtube.com/watch?v=gvkEHrLLI4k), [quest-centric NPCs](https://twitter.com/FirstDayGG/status/1764483275027095840), [Sims-like games](https://twitter.com/peggy_wang/status/1767656498212356597), [text games](https://www.thepromenade.ai/), and even [for Q&A](https://www.agentic.ai/).
 
-Companies to follow in the space:
-
-- [Agentic](https://www.agentic.ai/)
-- [Altera](https://twitter.com/Altera_AL)
-- [Clementine](https://twitter.com/ClementineInc), obviously.
-- [Ego](https://twitter.com/ego_ai_)
-- [First Day Entertainment](https://twitter.com/FirstDayGG)
-- [Jam and Tea](https://twitter.com/JamandTeaTime)
-- [Proxima](https://twitter.com/studioproxima?lang=en)
-
-
 
 **Asset Generation.**
 It's clear this is the most frequent use case for Generative AI. Plenty of companies trying to produce ready-made assets, and a handful that are doing the clever part of bridging between the output of a model and the ready-made asset. 
 
 It is interesting to see two approaches for motion though. [HEAT](https://heat.tech/) on the one hand is a motion marketplace. The idea is that you can find any any motion in the marketplace, download it, and apply it to your characters. [Latent Technologies](https://www.latent-technology.com/) on the other hand is building motion from first principles: given a task and a physics rule set, they can provide the motion that achieves the task. I am unsure how big of a market the latter is, but it does open the door for more physics-based mechanics. For example, Skypunk's [Brain Cell](https://store.steampowered.com/app/851720/Brain_Cell/) makes custom physics the main mechanic, and it looks awesome!
 
-I think there is a unique opportunity for high quality anime-style, game-ready 2d sprites or even _glTF_ scenes. First because how popular the genre is, second because of waifus, and third because high-quality 2d is within grasp. [Avatech](https://www.avatech.ai/) has a strong prototype: a workflow that delivers a programmable animation! But Parhelion, who is building Sushi-grade anime games, is the right benchmark for what is useful. They have an army of artists, so anything that deviates their workflows from artists to GPUs is a strong endorsement of the technology. That would be my target client if I was in the space.
+I think there is a unique opportunity for high quality anime-style, game-ready 2d sprites or even _glTF_ scenes. First because how popular the genre is, second because of waifus, and third because high-quality 2d is within grasp. [Avatech](https://www.avatech.ai/) has a strong prototype: a workflow that delivers a programmable animation! But [Parhelion](https://parhelion.gg/), who is building Sushi-grade anime games, is the right benchmark for what is useful. They have an army of artists, so anything that deviates their workflows from artists to GPUs is a strong endorsement of the technology. That would be my target client if I was in the space.
 
 Then, there is [videogame.ai](https://videogame.ai/) that is re-structuring how game development is done to take the most advantage of generative AI at the development stage.
 
@@ -57,3 +46,9 @@ One argument is that perhaps we want at least to have a way to balance how much 
 I keep thinking of how the Stable Diffusion has this rich ecosystem with closer to proper control systems for art creation: [ControlNet](https://github.com/lllyasviel/ControlNet) and [ComfyUI](https://github.com/comfyanonymous/ComfyUI) are clear examples. This was only possible because of the open source nature of the model. LLMs have seen some success with LoRAs, LangChain, and DSPy, but not nearly enough. In part because the best models are closed and in part because the use cases are much more varied. 
 
 If we are going to see control knobs for LLM workflows, it will be for specific use cases and it will require open source models.
+
+**Some companies to follow in the space**:
+
+- Agents: [Agentic](https://www.agentic.ai/), [Altera](https://twitter.com/Altera_AL), [Clementine](https://twitter.com/ClementineInc) (obviously), [Ego](https://twitter.com/ego_ai_), [First Day Entertainment](https://twitter.com/FirstDayGG), [Incite](https://incite.dev/), [Jam and Tea](https://twitter.com/JamandTeaTime), [Open Souls](https://www.socialagi.dev/), [Pocket Frens](https://www.pocketfrens.xyz/), [Proxima](https://twitter.com/studioproxima?lang=en), [the Simulation](https://www.thesimulation.ai/)
+- Content generation: [Avatech](https://www.avatech.ai/), [glyf](https://glyf.space/), [HEAT](https://heat.tech/), [Hedra](https://www.hedra.com/), [Latent Technologies](https://www.latent-technology.com/), [OptimizerAI](https://www.optimizerai.xyz/), Tractive, [videogame.ai](https://videogame.ai/)
+- Text-based games: [AI Dungeon](https://aidungeon.com/), [Bonfire](https://www.trybonfire.ai/), [Hidden Door](https://www.hiddendoor.co/), [the Promenade](https://www.thepromenade.ai/)

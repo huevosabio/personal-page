@@ -48,7 +48,7 @@ We will create open source tools that allow game developers to develop and deplo
 
 I am very excited to be working on this, and as you imagine I love to talk about it. If you share this enthusiasm, whether you are a gamer, a game dev, or just an enthusiast, please reach out to me!
 
-You can find me on [Twitter](https://twitter.com/RamonDarioIT), join our [Discord](https://discord.gg/2WMhYgQy), or simply shoot me an email at [ramon@clementine.games](mailto:ramon@clementine.games). 
+You can find me on [Twitter](https://twitter.com/RamonDarioIT), join our [Discord](https://discord.gg/HTuyuKFeRG), or simply shoot me an email at [ramon@clementine.games](mailto:ramon@clementine.games). 
 
 Cheers!
 Ramon
