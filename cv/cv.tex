@@ -1,272 +1,149 @@
 \documentclass[a4paper,10pt]{article}
 
-% TODO:
-% - Needs more deep learning. Add the Yamins project and the State Estimation project to beef up DL.
-% 
-
-%A Few Useful Packages
 \usepackage{tabularx}
 \usepackage{marvosym}
 \usepackage{fontspec} 					%for loading fonts
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-%usepackage[big]{layaureo} 				%better formatting of the A4 page
-% an alternative to Layaureo can be ** \usepackage{fullpage} **
 \usepackage{supertabular} 				%for Grades
 \usepackage{titlesec}					%custom \section
 \usepackage[cm]{fullpage}
-%Setup hyperref package, and colours for links
 
 \usepackage[margin=0.2in,bottom=0.1in, top=0.25in]{geometry}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \usepackage{hyperref}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
-%FONTS
-%\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-%%% modified for Karol Kozioł for ShareLaTeX use
-%\setmainfont[
-%SmallCapsFont = Fontin-SmallCaps.otf,
-%BoldFont = Fontin-Bold.otf,
-%ItalicFont = Fontin-Italic.otf
-%]
-%{Fontin.otf}
-%%%
-
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
 \titleformat{\section}{\raggedright\bfseries}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
-%Tweak a bit the top margin
-%\addtolength{\voffset}{-1.3cm}
 
-%Italian hyphenation for the word: ''corporations''
-\hyphenation{im-pre-se}
-
-
-%---------publications
 \renewcommand\refname{Publications}
 
-%-------------WATERMARK TEST [**not part of a CV**]---------------
 \usepackage[absolute]{textpos}
-
 \setlength{\TPHorizModule}{30mm}
 \setlength{\TPVertModule}{\TPHorizModule}
 \textblockorigin{2mm}{0.65\paperheight}
 \setlength{\parindent}{0pt}
 
-%--------------------BEGIN DOCUMENT----------------------
 \begin{document}
 
-%WATERMARK TEST [**not part of a CV**]---------------
-%\font\wm=''Baskerville:color=787878'' at 8pt
-%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
-%{\wm 
-%	\begin{textblock}{1}(0,0)
-%		\rotatebox{-90}{\parbox{500mm}{
-%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
-%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
-%		}
-%	}
-%	\end{textblock}
-%}
+\pagestyle{empty}
 
-\pagestyle{empty} % non-numbered pages
+\font\fb=''[cmr10]''
 
-\font\fb=''[cmr10]'' %for use with \LaTeX command
-
-%--------------------TITLE-------------
 {\centering
 		{\Large Ram\'{o}n Dar\'{i}o   Iglesias
 	}\par}
 
-%--------------------SECTIONS-----------------------------------
-%Section: Personal Data
-%\section{Contact Information}
-
 \centering{\href{tel:16506697306}{+1 650 669 7306} | \href{mailto:ramon.d.iglesias@gmail.com}{ramon.d.iglesias@gmail.com} | \url{http://ramondario.com}}
 
-%Section: Interests
-%\section{Research Interests}
-%\begin{tabularx}{\textwidth}{lX}
-%Machine Learning, Artificial Intelligence, Reinforcement Learning, Representation Learning, Optimization %\\
-
-%\bf{Theory:}& Machine Learning, Representation Learning, Deep Learning\\ \\ 
-%\end{tabularx}
-
-%Section: Work Experience at the top
 \section{Recent Experience}
 \begin{tabularx}{\textwidth}{Xr}
 
- {\bf{Lyft Inc.}}, San Francisco, CA & \bf{09/2019-Present}\\
+{\bf{Clementine}}, San Francisco, CA \hfill \bf{09/2023 -- Present}\\
+\emph{Founder / CEO} \\
+\multicolumn{2}{p{0.98\textwidth}}{
+Founded an AI x games company and led development of agentic systems, LLM infrastructure, and evaluation frameworks:
+\begin{itemize}
+  \item Led the design and development of \href{https://store.steampowered.com/app/3987700/Allyon_Battlecry/}{\emph{Allyon: Battlecry}}, a monster-trainer game where players train monsters using voice.
+    \begin{itemize}
+        \item Implemented the voice-to-code pipeline that generates, compiles, and executes C\# behaviors in real time.
+        \item Implemented safety guardrails in-game by sandboxing what the LLM can access and filtering disallowed outputs (e.g., emoji-based feedback channels with blacklisted symbols).
+    \end{itemize}
+  \item Led the design and development of clm, a framework to integrate AI models in games
+    \begin{itemize}
+        \item Developed a multimodal AI gateway that routes and serves different LLMs and multimodal models (chat, images, audio, streaming) behind a unified interface with observability.
+        \item Designed and implemented an SDK for integrating generative models into the Godot engine, including image, audio and text models, local RAG, object hydration, and bindings for C\# and GDScript.
+        \item Built observability and evaluation infrastructure for the SDK and AI gateway: telemetry for prompts/tool calls, automated benchmarking for code generation, and metrics on compile success, retries, and latency. These metrics helped us polish the API we expose to the LLM leading us to reduce code generation failure rate by 66\% and latency by 75\%.
+    \end{itemize}
+  \item Built \emph{Thus Spoke Zaranova}, an AI social deception game where NPCs are LLM agents using RAG, reflection, and tool-calling to infer hidden roles and adapt strategies in multiplayer sessions.
+  \item Prototyped colony-sim and god-sim games where pawns are LLM-driven agents combined with symbolic planners.
+  \item Built and led a cross-functional team of AI engineers, gameplay engineers, technical designers, and artists.
+  \item Raised \$750k from a16z Speedrun and angel investors.
+  \item Created the AIxGames community (meetups, Discord, \href{https://www.youtube.com/@PlayingWithInference}{\emph{Playing With Inference}} podcast) to share best practices in LLM agents, tools, and game applications.
+\end{itemize}
+}\\
+
+
+ {\bf{Lyft Inc.}}, San Francisco, CA & \bf{09/2019 -- 09/2023}\\
  \emph{Senior Data Scientist} &\\
  \multicolumn{2}{p{0.98\textwidth}}{
- Tech lead building algorithmic systems for real-time supply management and risk prediction based on telematics data:
+ Tech lead building real-time optimization and ML systems for fleet management:
  \begin{itemize}
-    % telematics
-    \item Reduced pose estimation computing time by \~90\% by reducing the optimization problem to one of finding the largest eigenvalue and corresponding eigenvector.
-    \item Doubled the number of labeled stop signs by combining imagery and trajectory data and using a neural network to predict which intersections actually contained a stop sign.
-    \item Analyzed the relationship of stop sign violations and driver likelihood of getting into an accident.
- 	% powermode
- 	\item Increased Lyft revenue by 5\% in selected markets by designing, building and managing the Priority Mode Controller, a real-time admission system that controls access to Priority Mode. Offline, the controller learns the relationship between the percentage of Priority drivers and the percentage of rides assigned to Priority rides; online, it uses this model to optimize the size of the Priority set that maximizes market surplus.
- 	% ppz
- 	\item Influenced team roadmap by studying the effectiveness of different monetized and unmonetized driver nudges via A/B testing leading to a complete revamp of the real-time supply management strategy.
- 	% hotspots
- 	\item Built a driver positioning recommendation system that optimizes driver earnings based on short-term, geotemporal forecasts of supply and demand.
- 	\item Enhanced Lyft's internal market simulator to support for centralized fleet control.
+ 	\item Increased revenue 5\% in selected markets by designing, developing and deploying Priority Mode Controller, a system to decide in real time how many drivers should we give matching preference to \cite{krishnan2021solving}.
+    \item Built driver repositioning system optimizing earnings via spatiotemporal demand forecasts, effectively treating drivers as agents in a large-scale stochastic control problem.
+ 	\item Led A/B testing framework evaluating driver nudges, influencing real-time supply management strategy.
+ 	\item Reduced driver's phone pose estimation compute time by $\sim$90\% via an eigenvector-based reformulation.
+    \item Doubled stop sign detection coverage using computer vision and driver telemetry.
+    \item Built ML workflow to detect road obstacles (e.g. potholes, speedbumps) based on phone IMUs' data.
+    %\item  Enhanced Lyft’s internal market simulator to support for centralized fleet control.
+    %\item Influenced team roadmap by studying the effectiveness of different monetized and unmonetized driver nudges via A/B testing leading to a complete revamp of the real-time supply management strategy.
  \end{itemize}
  }\\
 
- {\bf{Stanford University}}, Stanford, CA & \bf{01/2016-08/2019}\\
+ {\bf{Stanford University}}, Stanford, CA & \bf{01/2016 -- 08/2019}\\
  \emph{Research Assistant} &\\
  \multicolumn{2}{p{0.98\textwidth}}{
- Devised methods to model and control large fleets of autonomous vehicles (Autonomous Mobility-on-Demand, or AMoD):
+ Developed methods for large-scale autonomous fleet coordination:
  \begin{itemize}
- 	\item Developed a queueing-theoretical framework to characterize AMoD systems under heterogeneous constraints (e.g. road congestion, battery charging) that is amenable to optimization by casting it as a linear program \cite{IglesiasRossiEtAl2016,IglesiasRossiEtAl2017}.
- 	\item Leveraged network flow theory to optimize the interaction between autonomous, electric fleets and the power grid \cite{RossiIglesiasEtAl2018,RossiIglesiasEtAl2018b}.
- 	\item Developed a stochastic model predictive controller that leverages demand forecasts from a recurrent neural network to operate in real-time large fleets of autonomous vehicles \cite{IglesiasRossiEtAl2018,TsaoIglesiasEtAl} resulting in a 90\% reduction in passenger waiting when compared to other methods in the literature.
- 	\item Built a vehicle relocation system in collaboration with Toyota Ha:mo, a carsharing system in Japan. Scope included the algorithmic relocation system as well as the UI used by the human relocators. Deployed pilot results showed 5\% increased availability of the vehicles and 10\% increase in parking.
- \end{itemize}
- Side projects in representation learning:
- \begin{itemize}
- 	\item Studied the impact of multi-task learning on the learned representations of convolutional neural networks. Results show increased predictive power with respect to representations observed in the Inferior Temporal (IT) cortex of primates.
- 	\item Developed deep learning methods to learn Bayesian filters from only images with the goal of recovering controllable latent dynamics. 
+ 	\item Built queueing-theoretical framework for heterogeneous fleet constraints, cast as linear program for real-time optimization \cite{IglesiasRossiEtAl2016,IglesiasRossiEtAl2017}.
+ 	\item Developed stochastic MPC using RNN demand forecasts to operate autonomous fleets, achieving 90\% reduction in wait times \cite{IglesiasRossiEtAl2018,TsaoIglesiasEtAl}.
+ 	\item Deployed vehicle relocation system with Toyota Ha:mo (Japan): 5\% increased availability, 10\% parking improvement.
+ 	\item Side projects: multi-task learning's impact on CNN representations; deep learning for Bayesian filters from images.
  \end{itemize}
  }\\
- %\multicolumn{2}{c}{} \\
 
- {\bf{Lyft Inc.}}, San Francisco, CA & \bf{06/2018-09/2018}\\
+ {\bf{Lyft Inc.}}, San Francisco, CA & \bf{06/2018 -- 09/2018}\\
  \emph{Research Science Intern} &\\
  \multicolumn{2}{p{0.98\textwidth}}{
- Worked on improving the performance of Lyft's self-driving pilot:
  \begin{itemize}
- 	\item Developed an algorithm that leverages demand forecasts and stochastic programming to optimize self-driving fleet movements in real-time. Simulation results show significant improvements in pickup time when compared to human drivers.
- 	\item Performed steady-state analyses to characterize upper bound (using network flows) and expected improvements (using queueing theory) based on historical data. This along with power analyses allowed us to design experiments in production.
- 	\item Deployed the prepositioning algorithm to a self-driving pilot in Las Vegas as part of an A/B test to understand the impact of prepositioning in ridesharing fleets.%prod
+ 	\item Developed stochastic programming algorithm for real-time autonomous fleet repositioning using demand forecasts. Deployed to Las Vegas self-driving pilot.
+ 	\item Performed steady-state analyses (network flows, queueing theory) and power analyses to design production experiments.
  \end{itemize}
  }\\
- %\multicolumn{2}{c}{} \\
 
-{\bf{SunPower}}, Richmond, CA & \bf{01/2015-01/2016}\\
+{\bf{SunPower}}, Richmond, CA & \bf{01/2015 -- 01/2016}\\
 \emph{Software Engineer} &\\
 \multicolumn{2}{p{0.98\textwidth}}{
-Architected and developed software for the Financial Products team:
 \begin{itemize}
-	\item Built a new pricing engine powering over \$5M  yearly in new residential leases.
-	\item Developed an internal data processing web application to run and visualize complex financial analyses.
-	\item Built the continuous integration pipeline for the Financial Products team allowing for faster and safer developing iterations.
+	\item Built pricing engine powering \$5M+ yearly in residential leases. Developed data processing web app and CI/CD pipeline.
 \end{itemize}
 }\\
-%\multicolumn{2}{X}{} \\
 
-{\bf{Stanford University}}, Stanford, CA & \bf{10/2013-12/2014}\\
-\emph{Research Assistant} &\\
-\multicolumn{2}{p{0.98\textwidth}}{
-Developed methods to optimize wind farm contractors operational costs:
-\begin{itemize} 
-	\item Built Markov chain models to forecast the expected number of days lost due to high winds by month and the best hours of the day to work each month using historical wind speed measurements and numerical weather prediction models.
-	\item Developed a data processing and optimization pipeline for converting GIS files of wind farms into optimal erection schedules. It consists of parsing the input files into a weighted graph and solving the crane schedule as a Traveling Salesman Problem. 
-	\item Built a web application (Angular frontend, Python backend) for wind farm contractors to leverage the wind forecasting and crane scheduling models to make better decisions on the design and construction schedule of the wind farm.
-\end{itemize}
-}\\
-%\multicolumn{2}{c}{} \\
-
-% \bf{06/2013-08/2013} &  \bf{Project Frog}, San Francisco, CA \\&\emph{Inventory Control Intern}\\&\footnotesize{Coordinated building component deliveries and tracked material inventories for four different school construction sites totaling 17 buildings within a three month schedule.}\\\multicolumn{2}{c}{} \\
-
-%\bf{06/2012-08/2012} &  \bf{Steger Bizzell}, Georgetown, TX \\&\emph{Water Utility Modeling Intern}\\&\footnotesize{Modeled a utility company's water and wastewater infrastructure using ArcGIS to provide asset management, demand forecast, and network optimization.}\\\multicolumn{2}{c}{} \\
-
-%\bf{07/2011-08/2011} &  \bf{Consorcio Carlo}, Guadalajara, Mexico \\&\emph{Superintendent}\\&\footnotesize{Developed the schedule, procured the required materials, managed the on-site operations, and helped prepare permit applications for a small residential project}\\\multicolumn{2}{c}{} \\
-
-%\bf{06/2011-07/2011} &  \bf{Grupo Atelier}, Guadalajara, Mexico \\&\emph{Cost Estimating Intern}\\&\footnotesize{Prepared detailed cost estimates for a range of different house designs of a residential development.}\\\multicolumn{2}{c}{} \\
-
-%\end{tabularx}
-
-%Section: Research
-%\section{Research Experience}
-%\begin{tabularx}{\textwidth}{Xr}
-
-%\bf{Stanford University} & \bf{10/2013-05/2014}\\
-%\emph{Wind Farm Layout Optimization} &
-%\\\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{\footnotesize{
-%	Reduced wind farm construction costs by 6\% by developing, as part of a multidisciplinary team, a method to parametrize construction cost, and optimize wind turbine layout and construction schedule. 
-%}}
-%\\
-%\multicolumn{2}{c}{} \\
-
-%\bf{09/2010-05/2011} &  \bf{The University of Texas at Austin}\\&\emph{Life-Cycle Analysis using Building Information Models}\\&\footnotesize{Mapped the workflow and information dependency for building life-cycle costing and energy modeling through industry case studies. Developed a framework based on Building Information Modeling to improve the process.}\\\multicolumn{2}{c}{} \\
-
-%\bf{11/2009-07/2010} &  \bf{Technical University Munich}\\&\emph{High Performance Concrete Adhesives}\\&\footnotesize{Tested different concrete adhesive when applied to high performance concrete.}\\\multicolumn{2}{c}{} \\
+%{\bf{Stanford University}}, Stanford, CA & \bf{10/2013 -- 12/2014}\\
+%\emph{Research Assistant} &\\
+%\multicolumn{2}{p{0.98\textwidth}}{
+%Built Markov chain models for wind farm construction forecasting. Developed optimization pipeline for crane scheduling (TSP). Built web app for contractors.
+%}\\
 
 \end{tabularx}
 
-%Section: Education
 \section{Education}
 
-\begin{tabularx}{\textwidth}{Xr}	
- \bf{Stanford University} & \bf{01/2016-08/2019}\\ 
-\emph{Ph.D. in Civil Engineering}&\\
-\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Advisor: Marco Pavone}\\
-\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Focus: Optimal Control of Autonomous Fleets.}\\
-\\%\multicolumn{2}{c}{} \\
-
- \bf{Stanford University} & \bf{09/2012-06/2014} \\ 
-\emph{M.S. in Civil Engineering} &
-\\\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Focus: Data Analysis and Optimization.}\\
+\begin{tabularx}{\textwidth}{Xr}
+ \bf{Stanford University}, Ph.D. in Civil Engineering & \bf{01/2016 -- 08/2019}\\
+ \multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Focus: Optimal Control of Autonomous Fleets.\newline Advisor: Marco Pavone}\\
 \\
-%\multicolumn{2}{c}{} \\
 
-\bf{The University of Texas at Austin} & \bf{08/2007-06/2012}\\
-\emph{B.S. in Civil Engineering} &\\
-%\multicolumn{2}{c}{} \\
+ \bf{Stanford University}, M.S. in Civil Engineering & \bf{09/2012 -- 06/2014} \\
+\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{Focus: Data Analysis, Optimization, Machine Learning}\\
+\\
+
+\bf{UT Austin}, B.S. in Civil Engineering & \bf{08/2007 -- 06/2012}\\
 \end{tabularx}
-
-
-%Section: Scholarships and additional info
-%\section{Selected Projects}
-%\begin{tabularx}{\textwidth}{Xr}
-
-% \bf{groupstats.io} & \bf{08/2015-12/2015} \\
-% \emph{Side Project} &\\
-% \multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{\footnotesize{Designed the architecture, and built frontend and backend features for  \emph{groupstats.io}, a web application that allows users to visually analyze the dynamics of their Whatsapp chats.}}\\
-% \multicolumn{2}{c}{} \\
-
-%\bf{Let's Get Weird} & \bf{11/2014-01/2015}\\
-%\emph{Startup Weekend} &\\
-%\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{\footnotesize{Built a mobile app to share pictures with nearby people during the peak nightlife hours.}}\\
-%\multicolumn{2}{c}{} \\
-
- %\bf{Industrialized Construction Studio} & \bf{09/2013-04/2014}\\
- %\emph{Stanford University} &\\
- %\multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}{\footnotesize{Helped organized a course investigating the methods, drivers and barriers of industrialized construction through engagement with American and Swedish companies in the form of site visits, lectures, and joint projects.}}\\
- %\multicolumn{2}{c}{} \\
-
-%\bf{11/2013- 12/2013} &  \bf{Stanford University}\\&\emph{Learning Algorithm for Optimization}\\&\footnotesize{Developed a Naive Bayes based algorithm to accelerate the optimization of Wind Farm Layouts}\\\multicolumn{2}{c}{} \\
-
-%\bf{03/2011-05/2012} &  \bf{The University of Texas at Austin}\\&\emph{Modular Steel Frame Optimization}\\&\footnotesize{Developed a model that optimized the spatial arrangement and sizing arrangement of a steel frame modular building.}\\\multicolumn{2}{c}{} \\
-
-%\bf{04/2010-08/2010} &  \bf{Technical University Munich}\\&\emph{Risk Based Flood Protection Optimization}\\&\footnotesize{Optimized a flood protection system by balancing the trade-off between mitigation cost and expected cost of failure under different land use scenarios.}\\\multicolumn{2}{c}{} \\
-
-%\end{tabularx}
-
-
-
-
-
-
-
-%Section: Skills
 
 \section{Skills}
 \begin{tabularx}{\textwidth}{lX}
-\bf{Software:}& Python (Numpy, Pandas, Tensorflow, PyTorch, Flask), Javascript (React, AngularJS, D3, Leaflet), R; AWS, Spark, Git, Docker, CircleCI, PostgreSQL, \LaTeX \\ \\ 
+\textbf{LLMs \& Agents:} RAG systems, agent architectures, observability, evaluations.\\
 
- \bf{Coursework:}& Machine Learning, Data Mining, Decision Making under Uncertainty, Optimization, Deep Learning, Data Visualization, Optimal Control, State Estimation, Web Development\\ \\ 
+\textbf{ML/AI:} PyTorch, TensorFlow, Burn (Rust ML).\\
 
- %\bf{Sports:}& Show Jumping, Soccer, Racquetball\\ \\
+\textbf{Languages:} Rust, Python, TypeScript/JavaScript, C\#, GDScript\\
 
- %\bf{Languages:}& Spanish (native), English (fluent), German (intermediate)\\ \\ 
+\textbf{Infrastructure:} AWS, Docker, PostgreSQL, Git, OpenTelemetry.\\
+
+\textbf{Methods:} Optimization (LP, MPC), RL, control theory, queueing theory, A/B testing\\
 \end{tabularx}
 
 \nocite{*}
